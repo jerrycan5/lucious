@@ -45,7 +45,7 @@ const defaultUser: User = {
   name: "James Dominquez",
   email: "Godslovesthesfirsts@gmail.com",
   accountNumber: "7172594338",
-  balance: 790400.00, // Final balance
+  balance: 790400.65, // Final balance
   password: "PG2024Bank!",
   phone: "(813) 340-1568",
   memberSince:"2017",
@@ -66,38 +66,38 @@ const generateBrokenDownTransactions = () => {
     { id: idCounter++, time: "11:00 AM", company: "Jenna L.", amount: -3850.22, bank: "Zelle Transfer", date: "September 07, 2024", type: "debit" as const, userId: 1 },
     { id: idCounter++, time: "2:00 PM", company: "Whole Foods Market", amount: -218.46, bank: "Main Bank", date: "September 08, 2024", type: "debit" as const, userId: 1 },
     { id: idCounter++, time: "3:30 PM", company: "Starbucks", amount: -14.65, bank: "Main Bank", date: "September 10, 2024", type: "debit" as const, userId: 1 },
-    { id: idCounter++, time: "1:00 PM", company: "Malik T.", amount: -6200.10, bank: "Zelle Transfer", date: "September 12, 2024", type: "debit" as const, userId: 1 },
+    { id: idCounter++, time: "1:00 PM", company: "Malik T.", amount: -6200.15, bank: "Zelle Transfer", date: "September 12, 2024", type: "debit" as const, userId: 1 },
     { id: idCounter++, time: "11:00 AM", company: "Subscription", amount: -10.99, bank: "Spotify ", date: "September 13, 2024", type: "debit" as const, userId: 1 },
-    { id: idCounter++, time: "2:00 PM", company: "Charles Schwab", amount: 110667.00, bank: "Investment Dividends ", date: "September 15, 2024", type: "credit" as const, userId: 1 },
-    { id: idCounter++, time: "3:00 PM", company: "PNC Bank", amount: -21000.39, bank: "Transfer to Self", date: "September 16, 2024", type: "debit" as const, userId: 1 },
+    { id: idCounter++, time: "2:00 PM", company: "Charles Schwab", amount: 110667.14, bank: "Investment Dividends ", date: "September 15, 2024", type: "credit" as const, userId: 1 },
+    { id: idCounter++, time: "3:00 PM", company: "PNC Bank", amount: -21685.39, bank: "Transfer to Self", date: "September 16, 2024", type: "debit" as const, userId: 1 },
     { id: idCounter++, time: "10:00 AM", company: "iPad Pro", amount: -1197.15, bank: "Apple Store", date: "September 19, 2024", type: "debit" as const, userId: 1 },
     { id: idCounter++, time: "2:30 PM", company: "Business Ride", amount: -42.30, bank: "Uber", date: "September 21, 2024", type: "debit" as const, userId: 1 },
     { id: idCounter++, time: "9:00 AM", company: "Subscription", amount: -15.49, bank: "Netflix ", date: "September 25, 2024", type: "debit" as const, userId: 1 },
-    { id: idCounter++, time: "4:00 PM", company: "Olivia D.", amount: -2900.25, bank: "Transfer ", date: "September 28, 2024", type: "debit" as const, userId: 1 },
-    { id: idCounter++, time: "5:00 PM", company: "Luxury Watch Collection", amount: -23500.00, bank: "Cartier", date: "September 30, 2024", type: "debit" as const, userId: 1 },
+    { id: idCounter++, time: "4:00 PM", company: "Olivia D.", amount: -2970.25, bank: "Transfer ", date: "September 28, 2024", type: "debit" as const, userId: 1 },
+    { id: idCounter++, time: "5:00 PM", company: "Luxury Watch Collection", amount: -23510.19, bank: "Cartier", date: "September 30, 2024", type: "debit" as const, userId: 1 },
 
 
 
 
      // October 2024
-    { id: idCounter++, time: "9:00 AM", company: " Downtown Loft", amount: -5600.30, bank: "Rent", date: "October 01, 2024", type: "debit" as const, userId: 1 },
-    { id: idCounter++, time: "10:00 AM", company: "NoKidHungry.org", amount: -10000.68, bank: "Donation", date: "October 03, 2024", type: "debit" as const, userId: 1 },
-    { id: idCounter++, time: "11:00 AM", company: "Marcus E.", amount: -5000.45, bank: "Transfer", date: "October 05, 2024", type: "debit" as const, userId: 1 },
-    { id: idCounter++, time: "2:00 PM", company: " Joe's", amount: -189.50, bank: "Trader", date: "October 06, 2024", type: "debit" as const, userId: 1 },
-    { id: idCounter++, time: "3:00 PM", company: "Flight NYC", amount: -1023.20, bank: "Delta Airlines ", date: "October 09, 2024", type: "debit" as const, userId: 1 },
+    { id: idCounter++, time: "9:00 AM", company: " Downtown Loft", amount: -5650.34, bank: "Rent", date: "October 01, 2024", type: "debit" as const, userId: 1 },
+    { id: idCounter++, time: "10:00 AM", company: "NoKidHungry.org", amount: -1425.68, bank: "Donation", date: "October 03, 2024", type: "debit" as const, userId: 1 },
+    { id: idCounter++, time: "11:00 AM", company: "Marcus E.", amount: -5250.45, bank: "Transfer", date: "October 05, 2024", type: "debit" as const, userId: 1 },
+    { id: idCounter++, time: "2:00 PM", company: " Joe's", amount: -189.53, bank: "Trader", date: "October 06, 2024", type: "debit" as const, userId: 1 },
+    { id: idCounter++, time: "3:00 PM", company: "Flight NYC", amount: -1040.24, bank: "Delta Airlines ", date: "October 09, 2024", type: "debit" as const, userId: 1 },
     { id: idCounter++, time: "1:00 PM", company: "Ashley T.", amount: -7200.24, bank: "Zelle Transfer", date: "October 11, 2024", type: "debit" as const, userId: 1 },
-    { id: idCounter++, time: "2:30 PM", company: " Business Ride", amount: -36.90, bank: "Uber", date: "October 12, 2024", type: "debit" as const, userId: 1 },
-    { id: idCounter++, time: "10:00 AM", company: "Consulting Income", amount: 6000.20, bank: "Freelance ", date: "October 15, 2024", type: "credit" as const, userId: 1 },
+    { id: idCounter++, time: "2:30 PM", company: " Business Ride", amount: -36.92, bank: "Uber", date: "October 12, 2024", type: "debit" as const, userId: 1 },
+    { id: idCounter++, time: "10:00 AM", company: "Consulting Income", amount: 6550.28, bank: "Freelance ", date: "October 15, 2024", type: "credit" as const, userId: 1 },
     { id: idCounter++, time: "11:00 AM", company: "Subscription", amount: -9.99, bank: "Apple Music", date: "October 17, 2024", type: "debit" as const, userId: 1 },
     { id: idCounter++, time: "3:00 PM", company: "Chevron", amount: -96.44, bank: "Gas", date: "October 19, 2024", type: "debit" as const, userId: 1 },
-    { id: idCounter++, time: "4:00 PM", company: "Brian M.", amount: -3100.18, bank: "Transfer", date: "October 22, 2024", type: "debit" as const, userId: 1 },
+    { id: idCounter++, time: "4:00 PM", company: "Brian M.", amount: -3120.18, bank: "Transfer", date: "October 22, 2024", type: "debit" as const, userId: 1 },
     { id: idCounter++, time: "1:00 PM", company: " Online Purchase", amount: -380.19, bank: "Zara ", date: "October 25, 2024", type: "debit" as const, userId: 1 },
-    { id: idCounter++, time: "2:00 PM", company: "Local Food Bank", amount: -500.29, bank: "Donation", date: "October 27, 2024", type: "debit" as const, userId: 1 },
+    { id: idCounter++, time: "2:00 PM", company: "Local Food Bank", amount: -505.29, bank: "Donation", date: "October 27, 2024", type: "debit" as const, userId: 1 },
     { id: idCounter++, time: "9:00 AM", company: "Subscription", amount: -14.99, bank: "Transfer ", date: "October 30, 2024", type: "debit" as const, userId: 1 },
  // December 2024
     { id: idCounter++, time: "9:00 AM", company: "Downtown Loft", amount: -5600.22, bank: "Rent ", date: "December 01, 2024", type: "debit" as const, userId: 1 },
-    { id: idCounter++, time: "10:00 AM", company: "NoKidHungry.org", amount: -10000.30, bank: "Donation", date: "December 02, 2024", type: "debit" as const, userId: 1 },
-    { id: idCounter++, time: "11:00 AM", company: "Maya S.", amount: -6000.50, bank: "Transfer ", date: "December 03, 2024", type: "debit" as const, userId: 1 },
+    { id: idCounter++, time: "10:00 AM", company: "NoKidHungry.org", amount: -10000.32, bank: "Donation", date: "December 02, 2024", type: "debit" as const, userId: 1 },
+    { id: idCounter++, time: "11:00 AM", company: "Maya S.", amount: -6115.52, bank: "Transfer ", date: "December 03, 2024", type: "debit" as const, userId: 1 },
     { id: idCounter++, time: "2:00 PM", company: "Starbucks", amount: -15.25, bank: "Main Bank", date: "December 04, 2024", type: "debit" as const, userId: 1 }
   ]
 
@@ -120,17 +120,17 @@ const generateBrokenDownTransactions = () => {
   
 
     // November 2024
-    { id: idCounter++, time: "9:00 AM", company: " Downtown Loft", amount: -5600.63, bank: "rent", date: "November 01, 2024", type: "debit" as const, userId: 1 },
-    { id: idCounter++, time: "10:00 AM", company: "NoKidHungry.org", amount: -10000.15, bank: "Donation ", date: "November 02, 2024", type: "debit" as const, userId: 1 },
-    { id: idCounter++, time: "11:00 AM", company: "Melinda R.", amount: -3400.39, bank: "Transfer ", date: "November 04, 2024", type: "debit" as const, userId: 1 },
-    { id: idCounter++, time: "2:00 PM", company: "Business Travel", amount: -31.40, bank: "Lyft ", date: "November 05, 2024", type: "debit" as const, userId: 1 },
+    { id: idCounter++, time: "9:00 AM", company: " Downtown Loft", amount: -5610.63, bank: "rent", date: "November 01, 2024", type: "debit" as const, userId: 1 },
+    { id: idCounter++, time: "10:00 AM", company: "NoKidHungry.org", amount: -10210.15, bank: "Donation ", date: "November 02, 2024", type: "debit" as const, userId: 1 },
+    { id: idCounter++, time: "11:00 AM", company: "Melinda R.", amount: -3420.39, bank: "Transfer ", date: "November 04, 2024", type: "debit" as const, userId: 1 },
+    { id: idCounter++, time: "2:00 PM", company: "Business Travel", amount: -31.42, bank: "Lyft ", date: "November 05, 2024", type: "debit" as const, userId: 1 },
     { id: idCounter++, time: "3:00 PM", company: " Daniel A.", amount: -6750.75, bank: "Zelle Transfer ", date: "November 08, 2024", type: "debit" as const, userId: 1 },
     { id: idCounter++, time: "1:00 PM", company: "Tech Accessories", amount: -624.19, bank: "Best Buy", date: "November 10, 2024", type: "debit" as const, userId: 1 },
     { id: idCounter++, time: "11:00 AM", company: "YouTube Premium", amount: -11.99, bank: "YouTube", date: "November 13, 2024", type: "debit" as const, userId: 1 },
     { id: idCounter++, time: "10:00 AM", company: "Reimbursement", amount: 2750.59, bank: "Business ", date: "November 15, 2024", type: "credit" as const, userId: 1 },
     { id: idCounter++, time: "2:00 PM", company: "Walgreens", amount: -43.89, bank: "Medication", date: "November 18, 2024", type: "debit" as const, userId: 1 },
-    { id: idCounter++, time: "7:00 PM", company: " Nobu London", amount: -426.20, bank: "Dinner", date: "November 22, 2024", type: "debit" as const, userId: 1 },
-    { id: idCounter++, time: "3:00 PM", company: " Joseph N.", amount: -4800.65, bank: "Transfer", date: "November 23, 2024", type: "debit" as const, userId: 1 },
+    { id: idCounter++, time: "7:00 PM", company: " Nobu London", amount: -426.23, bank: "Dinner", date: "November 22, 2024", type: "debit" as const, userId: 1 },
+    { id: idCounter++, time: "3:00 PM", company: " Joseph N.", amount: -4840.65, bank: "Transfer", date: "November 23, 2024", type: "debit" as const, userId: 1 },
     { id: idCounter++, time: "11:00 AM", company: "Subscription Bundle", amount: -19.95, bank: "Apple", date: "November 25, 2024", type: "debit" as const, userId: 1 },
     { id: idCounter++, time: "9:00 AM", company: "Black Friday Sale", amount: -1305.34, bank: "Amazon", date: "November 28, 2024", type: "debit" as const, userId: 1 },
 
