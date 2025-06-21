@@ -24,7 +24,7 @@ export default function UserLogin() {
     console.log("Attempting login with:", username, password) // Debug log
 
     // Check credentials for James Dominguez
-    if (username === "dominguez2525" && password === "PG2024Bank!") {
+    if (username === "dominquez2525" && password === "PG2024Bank!") {
       // Set authentication in localStorage
       localStorage.setItem("user_authenticated", "true")
 

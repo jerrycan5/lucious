@@ -84,11 +84,15 @@ export default function UserDashboard() {
   const recentTransactions = transactions.slice(0, 8) // Show more recent transactions
 
   const getGreeting = () => {
-    const hour = new Date().getHours()
-    if (hour < 12) return "Good morning"
-    if (hour < 17) return "Good afternoon"
-    return "Good evening"
-  }
+  const options = { hour: "numeric", hour12: false, timeZone: "America/New_York" }
+  const hourStr = new Intl.DateTimeFormat("en-US", options).format(new Date())
+  const hour = parseInt(hourStr)
+
+  if (hour < 12) return "Good morning"
+  if (hour < 17) return "Good afternoon"
+  return "Good evening"
+}
+
 
   const handleRefresh = () => {
     refreshData()
@@ -231,7 +235,7 @@ export default function UserDashboard() {
                     <span>Dashboard</span>
                   </Link>
                 </li>
-                
+
                 <li>
                   <Link
                     href="/user/dashboard/profile"
@@ -242,10 +246,10 @@ export default function UserDashboard() {
                     <span>Profile</span>
                   </Link>
                 </li>
-            
+  
 
-<li>
-  <Link
+    <li>
+    <Link
     href="/user/dashboard/transactions"
     className="flex items-center gap-3 p-3 sm:p-4 rounded-xl hover:bg-gray-50 transition-colors"
     onClick={() => setIsMobileMenuOpen(false)}
