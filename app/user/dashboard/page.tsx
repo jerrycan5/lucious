@@ -84,7 +84,7 @@ export default function UserDashboard() {
   const recentTransactions = transactions.slice(0, 8) // Show more recent transactions
 
   const getGreeting = () => {
-  const options = { hour: "numeric", hour12: false, timeZone: "America/New_York" }
+  const options: Intl.DateTimeFormatOptions = { hour: "numeric", hour12: false, timeZone: "America/New_York" }
   const hourStr = new Intl.DateTimeFormat("en-US", options).format(new Date())
   const hour = parseInt(hourStr)
 
@@ -395,7 +395,10 @@ export default function UserDashboard() {
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 lg:gap-4">
-              <Button className="h-14 sm:h-16 lg:h-20 flex-col gap-1 sm:gap-2 bg-gradient-to-br from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg text-xs sm:text-sm">
+              <Button
+                onClick={() => router.push('/user/dashboard/send-money')}
+                className="h-14 sm:h-16 lg:h-20 flex-col gap-1 sm:gap-2 bg-gradient-to-br from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg text-xs sm:text-sm"
+              >
                 <Send className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6" />
                 <span>Send Money</span>
               </Button>
