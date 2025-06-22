@@ -2,25 +2,20 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { AlertCircle, ArrowLeft } from "lucide-react"
-import { BankLogo } from "@/components/ui/bank-logo"
 
-export default function SendMoneyPage() {
+export default function ZelleTransferPage() {
   const router = useRouter()
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
   const [formData, setFormData] = useState({
-    accountNumber: "",
-    amount: "",
-    routingNumber: "",
-    memo: ""
+    contactInfo: "",
+    amount: ""
   })
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -28,22 +23,26 @@ export default function SendMoneyPage() {
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
-
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
     setError("")
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    setError("Transaction failed. Please contact support.")
-    setIsLoading(false)
+    
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000))
+      // In a real app, you would make an API call here
+      throw new Error("Zelle transfer failed")
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Transfer failed")
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#f5f7fa] to-[#c3cfe2] flex items-center justify-center p-4">
       <Card className="w-full max-w-md shadow-2xl border border-blue-200 rounded-2xl bg-white relative">
-        
-        {/* Back button (Top-Left) */}
         <button
           onClick={() => router.push("/user/dashboard")}
           className="absolute top-4 left-4 text-blue-800 hover:text-blue-900"
@@ -52,44 +51,28 @@ export default function SendMoneyPage() {
         </button>
 
         <CardHeader className="text-center pt-12">
-          <div className="mb-4 flex justify-center">
-            <BankLogo size="lg" />
-          </div>
-
-          <CardTitle className="text-2xl text-blue-900 font-semibold">Send Money</CardTitle>
+          <CardTitle className="text-2xl text-blue-900 font-semibold">Zelle Transfer</CardTitle>
           <CardDescription className="text-sm text-gray-500">
-            Transfer funds securely to other bank accounts
+            Send money instantly with Zelle
           </CardDescription>
         </CardHeader>
 
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-6">
-
             <div className="space-y-2">
-              <Label htmlFor="routingNumber">Routine Number</Label>
+              <Label htmlFor="contactInfo">Phone Number or Email</Label>
               <Input
-                id="routingNumber"
-                name="routingNumber"
+                id="contactInfo"
+                name="contactInfo"
                 type="text"
-                value={formData.routingNumber}
+                value={formData.contactInfo}
                 onChange={handleInputChange}
-                placeholder="Enter routing number"
+                placeholder="Enter phone number or email"
                 className="border-blue-300 focus:ring-blue-400"
+                required
               />
             </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="accountNumber">Account Number</Label>
-              <Input
-                id="accountNumber"
-                name="accountNumber"
-                type="text"
-                value={formData.accountNumber}
-                onChange={handleInputChange}
-                placeholder="Enter account number"
-                className="border-blue-300 focus:ring-blue-400"
-              />
-            </div>
             <div className="space-y-2">
               <Label htmlFor="amount">Amount</Label>
               <div className="relative">
@@ -104,21 +87,9 @@ export default function SendMoneyPage() {
                   onChange={handleInputChange}
                   className="pl-7 border-blue-300 focus:ring-blue-400"
                   placeholder="0.00"
+                  required
                 />
               </div>
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="memo">Memo</Label>
-              <Input
-                id="memo"
-                name="memo"
-                type="text"
-                value={formData.memo}
-                onChange={handleInputChange}
-                placeholder="Enter memo"
-                className="border-blue-300 focus:ring-blue-400"
-              />
             </div>
 
             {error && (

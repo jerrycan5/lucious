@@ -403,6 +403,7 @@ export default function UserDashboard() {
                 <span>Send Money</span>
               </Button>
               <Button
+                onClick={() => router.push('/user/dashboard/receive')}
                 variant="outline"
                 className="h-14 sm:h-16 lg:h-20 flex-col gap-1 sm:gap-2 border-2 hover:bg-blue-50 shadow-md text-xs sm:text-sm"
               >
@@ -410,6 +411,7 @@ export default function UserDashboard() {
                 <span>Receive</span>
               </Button>
               <Button
+                onClick={() => router.push('/user/dashboard/pay-bills')}
                 variant="outline"
                 className="h-14 sm:h-16 lg:h-20 flex-col gap-1 sm:gap-2 border-2 hover:bg-blue-50 shadow-md text-xs sm:text-sm"
               >
@@ -419,20 +421,22 @@ export default function UserDashboard() {
 
 
               <Button
+                onClick={() => router.push('/user/dashboard/zelle-transfer')}
                 variant="outline"
                 className="h-14 sm:h-16 lg:h-20 flex-col gap-1 sm:gap-2 border-2 hover:bg-blue-50 shadow-md text-xs sm:text-sm"
               >
                 <CreditCard className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 text-blue-600" />
-                <span>zelle transfer</span>
+                <span>Zelle Transfer</span>
               </Button>
 
 
               <Button
+                onClick={() => router.push('/user/dashboard/member-transfer')}
                 variant="outline"
                 className="h-14 sm:h-16 lg:h-20 flex-col gap-1 sm:gap-2 border-2 hover:bg-blue-50 shadow-md text-xs sm:text-sm"
               >
                 <CreditCard className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 text-blue-600" />
-                <span>member transfer</span>
+                <span>Member Transfer</span>
               </Button>
 
 
